@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Seguidores</title>
+</head>
+<body>
+    <h1>Contador Interativo de Seguidores</h1>
+    <h2>Nome da conta: Thiionf</h2>
+    <p>Seguidores: <span id="contagem"></span></p>
+    <hr>
+    <h2>Clique no botão abaixo para seguir ou deixar de seguir:</h2>
+    <button onclick="somaSeguidor()">Follow</button> 
+    <button onclick="removerSeguidor()">Unfollow</button>
+    <button onclick="redefinirSeguidores()">Redefinir Seguidores</button>
+    <hr>
+    <div onmouseover="hoverOver()" onmouseout="hoverOut()">Passe o mouse me cima</div>
+    <p id="hover"></p>
+    <script src="contador_seguidores.js"></script>
+</body>
+</html>
