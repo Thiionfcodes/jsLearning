@@ -1,0 +1,1 @@
+Bem vindo a minha área de estudos, aqui estou postando os primeiros aprendizados de JavaScript, quando a pasta tiver 2 projetos semelhantes é pois eu fiz o primeiro com auxílio do material de estudos e o segundo tentei replicar sem consulta para verificar se realmente tinha absorvido o conhecimento.
