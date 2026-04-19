@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Anmimes</title>
+</head>
+<body>
+    <h1>Sistema de Gerenciamento de Animes</h1>
+    <label for="nomeAnime">Nome do anime:</label><br>
+    <input type="text" id="nomeAnime"><br><br>
+    <label for="generoAnime">Gênero do anime:</label><br>
+    <input type="text" id="generoAnime"><br><br>
+    <label for="numeroEpisodios">Número de episódios:</label><br>
+    <input type="number" id="numeroEpisodios"><br><br>
+    <label for="descricaoAnime">Descrição do anime:</label><br>
+    <textarea id="descricaoAnime" rows="5"></textarea><br><br>
+    <button onclick="addAnimes()">Adicionar Anime</button>
+
+    <div id="animes"></div>
+    
+    <script src="sistema_animes.js"></script>
+</body>
+</html>

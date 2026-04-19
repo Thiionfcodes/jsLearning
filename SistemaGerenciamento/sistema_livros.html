@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de Gerenciamento de Livros</h1>
+    <label for="nomeLivro">Nome do Livro:</label><br>
+    <input type="text" id="nomeLivro"><br><br>
+    <label for="nomeAutor">Nome do Autor:</label><br>
+    <textarea id="nomeAutor" rows="4"></textarea><br><br>
+    <label for="descricaoLivro">Descrição do Livro:</label><br>
+    <textarea id="descricaoLivro" rows="4"></textarea><br><br>
+    <label for="numeroPaginas">Número de Páginas:</label><br>
+    <input type="number" id="numeroPaginas"><br><br>
+    <button onclick="addLivro()">Adicionar Livro</button>
+    <h1>Livros</h1>
+    <div id="livros">
+        <!-- os livros serão exibidos aqui -->
+    </div>
+    <script src="sistema_livros.js"></script>
+</body>
+</html>
