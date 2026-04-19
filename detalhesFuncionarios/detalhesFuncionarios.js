@@ -1,7 +1,9 @@
 const funcionarios = [
     {id: 1, nome: "Pedro", area: "Análise de dados", idade: 31, salario: 5000},
     {id: 2, nome: "Thiago", area: "Eng de Software", idade: 30, salario: 12000},
-    {id: 3, nome: "Carol", area: "Frontend", idade: 20, salario: 4500}
+    {id: 3, nome: "Carol", area: "Frontend", idade: 20, salario: 4500},
+    {id: 4, nome: "Lana", area: "Backend", idade: 23, salario: 6500},
+    {id: 5, nome: "Rachel", area: "Fullstack", idade: 25, salario: 9500}
 ];
 
 function exibirFuncionarios () {
@@ -27,4 +29,14 @@ function encontrarFuncionarioPorId(funcionarioID) {
     } else {
             document.getElementById("detalhesFuncionarios").innerText = "Não foi possível encontrar um funcionário com esse id."
         }
+    }
+
+    function exibirFuncionariosJovens() {
+        const funcionarioJovem = funcionarios.filter(funcionario => funcionario.idade <= 25);
+        const mostrarFuncionarioJovem = funcionarioJovem.map(funcionario => `
+        <p>Nome: ${funcionario.nome}</p>
+        <p>Idade: ${funcionario.idade}</p>
+        <p>Área: ${funcionario.area}</p>
+        <p>Salário: ${funcionario.salario}</p>`).join("-");
+        document.getElementById("detalhesFuncionarios").innerHTML = mostrarFuncionarioJovem;
     }
