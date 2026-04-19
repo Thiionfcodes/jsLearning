@@ -1,22 +1,29 @@
 let animes = [];
+let indiceEdit = null;
 
 function addAnimes() {
-    const nomeAnime = document.getElementById("nomeAnime").value;
-    const generoAnime = document.getElementById("generoAnime").value;
+    const nomeAnime = document.getElementById("nomeAnime").value.trim();
+    const generoAnime = document.getElementById("generoAnime").value.trim();
     const numeroEpisodios = parseInt(document.getElementById("numeroEpisodios").value);
-    const descricaoAnime = document.getElementById("descricaoAnime").value;
+    const descricaoAnime = document.getElementById("descricaoAnime").value.trim();
 
     if (nomeAnime && generoAnime && !isNaN(numeroEpisodios) && descricaoAnime) {
-    const anime = {
-    nome: nomeAnime,
-    genero: generoAnime,
-    numeroEp: numeroEpisodios,
-    descricao: descricaoAnime
-    }
+        const anime = {
+            nome: nomeAnime,
+            genero: generoAnime,
+            numeroEp: numeroEpisodios,
+            descricao: descricaoAnime
+        };
 
-    animes.push(anime);
-    mostrarAnimes();
-    limparCampos();
+        if (indiceEdit !== null) {
+            animes[indiceEdit] = anime;
+            indiceEdit = null;
+        } else {
+            animes.push(anime);
+        }
+
+        mostrarAnimes();
+        limparCampos();
 
     } else {
         alert("Preencha os dados corretamente");
@@ -24,14 +31,19 @@ function addAnimes() {
 }
 
 function mostrarAnimes() {
-    const mostrarAnimes = animes.map((anime, index) => `<h1>${anime.nome}</h1>
-    <p><strong>Gênero:</strong> ${anime.genero}</p>
-    <p><strong>Episódios:</strong> ${anime.numeroEp}</p>
-    <p><strong>Descrição:</strong> ${anime.descricao}</p>
-    <button onclick="editarAnimes(${index})">Editar</button>
-    <button onclick="deletarAnimes(${index})">Deletar</button>`
+    const listaAnimes = animes.map((anime, index) => `
+        <div class="card-anime">
+            <h2>${anime.nome}</h2>
+            <p><strong>Gênero:</strong> ${anime.genero}</p>
+            <p><strong>Episódios:</strong> ${anime.numeroEp}</p>
+            <p><strong>Descrição:</strong> ${anime.descricao}</p>
+            <div class="acoes-anime">
+                <button onclick="editarAnimes(${index})">Editar</button>
+                <button onclick="deletarAnimes(${index})">Deletar</button>
+            </div>
+        </div>`
     );
-    document.getElementById("animes").innerHTML = mostrarAnimes.join("");
+    document.getElementById("animes").innerHTML = listaAnimes.join("");
 }
 
 function limparCampos() {
@@ -47,11 +59,19 @@ function editarAnimes(index) {
     document.getElementById("generoAnime").value = anime.genero;
     document.getElementById("numeroEpisodios").value = anime.numeroEp;
     document.getElementById("descricaoAnime").value = anime.descricao;
-    animes.splice(index, 1);
-    mostrarAnimes();
+
+    indiceEdit = index;
 }
 
 function deletarAnimes(index) {
     animes.splice(index, 1);
+
+    if (indiceEdit === index) {
+        indiceEdit = null;
+        limparCampos();
+    } else if (indiceEdit !== null && index < indiceEdit) {
+        indiceEdit--;
+    }
+
     mostrarAnimes();
 }

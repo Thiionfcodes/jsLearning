@@ -4,6 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Anmimes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 16px;
+            background-color: #18122b;
+            color: #f4efff;
+        }
+
+        h1 {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 6px;
+            color: #d8c8f5;
+        }
+
+        input,
+        textarea,
+        button {
+            font-size: 16px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            max-width: 420px;
+            padding: 10px;
+            background-color: #2a1f45;
+            color: #f4efff;
+            border: 1px solid #5b478f;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 8px;
+            background-color: #7c3aed;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #animes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .card-anime {
+            background-color: #24183d;
+            border: 1px solid #4e3a7a;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .card-anime h2 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .card-anime p {
+            color: #ddd6f3;
+        }
+
+        .acoes-anime {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+        }
+    </style>
 </head>
 <body>
     <h1>Sistema de Gerenciamento de Animes</h1>
