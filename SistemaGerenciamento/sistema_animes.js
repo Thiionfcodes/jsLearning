@@ -37,7 +37,7 @@ function mostrarAnimes() {
             <p><strong>Gênero:</strong> ${anime.genero}</p>
             <p><strong>Episódios:</strong> ${anime.numeroEp}</p>
             <p><strong>Descrição:</strong> ${anime.descricao}</p>
-            <div class="acoes-anime">
+            <div class="botoes-anime">
                 <button onclick="editarAnimes(${index})">Editar</button>
                 <button onclick="deletarAnimes(${index})">Deletar</button>
             </div>
