@@ -1,0 +1,32 @@
+{
+	"articles": [
+		{
+			"title": "Sono de Qualidade",
+			"description": "Dormir bem ajuda na recuperacao do corpo e melhora a concentracao.",
+			"ways_to_achieve": [
+				"Manter horario regular para dormir",
+				"Evitar telas antes de deitar",
+				"Deixar o quarto escuro e silencioso"
+			],
+			"benefits": [
+				"Mais energia durante o dia",
+				"Melhora do humor",
+				"Maior capacidade de foco"
+			]
+		},
+		{
+			"title": "Alimentacao Equilibrada",
+			"description": "Uma dieta variada ajuda a fornecer os nutrientes necessarios para o organismo.",
+			"ways_to_achieve": [
+				"Consumir frutas e verduras",
+				"Beber bastante agua",
+				"Evitar excesso de ultraprocessados"
+			],
+			"benefits": [
+				"Melhora da saude geral",
+				"Mais disposicao",
+				"Fortalecimento do sistema imunologico"
+			]
+		}
+	]
+}

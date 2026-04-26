@@ -1,0 +1,34 @@
+{
+    "artigos": [
+        {
+            "titulo": "Ganho de massa muscular",
+            "descricao": "Para ganhar massa muscular é necessário treinar pesado e ter um superávit calório.",
+            "listaExe": [
+                "Peito/Triceps/Abdominal",
+                "Costas/Biceps/Trapézio",
+                "Perna/Ombro"
+            ],
+            "listaAlime": [
+                "2g/kg de proteína",
+                "4g/kg de carboidrato",
+                "1g/kg de gordura"
+            ]
+        },
+        {
+            "titulo": "Emagrecimento",
+            "descricao": "Para emagrecer deve-se manter um déficit calórico e realizar exercícios aeróbicos regularmente.",
+            "listaExe": [
+                "Peito/Triceps",
+                "Costas/Biceps",
+                "Perna",
+                "Trapezio/Ombro",
+                "Aeróbico todos os dias, até no dia de descanso"
+            ],
+            "listaAlime": [
+                "2g/kg de proteína",
+                "1.5g/kg de carboidrato",
+                "0.7g/kg de gordura"
+            ]
+        }
+    ]
+}
